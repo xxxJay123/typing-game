@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.topic-buttons button {
+  margin: 10px;
+}
+
+.word-container {
+  margin-top: 20px;
+}
+
+.score-container {
+  margin-top: 20px;
+}
