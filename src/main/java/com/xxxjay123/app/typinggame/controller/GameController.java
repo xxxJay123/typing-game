@@ -29,7 +29,7 @@ public class GameController {
   private final ScoreService scoreService;
 
   @GetMapping("/words/{topic}")
-  public ResponseEntity<List<Algorithm>> getWordsByTopic(
+  public ResponseEntity<List<Algorithm>> getWordsByLanguage(
       @PathVariable String language) {
     try {
       Language enumlanguage = Language.valueOf(language.toUpperCase());
@@ -42,8 +42,8 @@ public class GameController {
   }
 
   @GetMapping("/randomWord")
-  public ResponseEntity<List<Algorithm>> getRandomWord() {
-    List<Algorithm> algorithm = algorithmService.getRandomWord();
+  public ResponseEntity<List<Algorithm>> getRandom() {
+    List<Algorithm> algorithm = algorithmService.getRandom();
     return ResponseEntity.ok(algorithm);
   }
 
@@ -59,7 +59,7 @@ public class GameController {
     return ResponseEntity.ok(scores);
   }
 
-  @PostMapping("/upload-algorithmD")
+  @PostMapping("/upload-algorithm")
   public ResponseEntity<Algorithm> createAlgorithm(
       @RequestBody AlgorithmDTO algorithmDTO) {
     Algorithm algorithm = new Algorithm();

@@ -18,8 +18,8 @@ public class AlgorithmService {
     return algorithmRepository.findByLanguage(topic);
   }
 
-  public List<Algorithm> getRandomWord() {
-    return algorithmRepository.findRandomWord();
+  public List<Algorithm> getRandom() {
+    return algorithmRepository.findRandomAlgorithm();
   }
 
   public Algorithm createAlgorithm(Algorithm algorithm) {

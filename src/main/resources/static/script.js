@@ -1,42 +1,55 @@
-function selectTopic(topic) {
-  fetch(`/api/v1/game/words/${topic}`)
-  .then(response => {
-      if (response.ok) {
-          return response.json();
-      }
-      throw new Error('Network response was not ok.');
-  })
-  .then(data => {
-      // Update the 'word' span element with the fetched word
-      document.getElementById('word').textContent = data.word;
-  })
-  .catch(error => console.error('Error:', error));
+const codeSnippetElement = document.getElementById('codeSnippet');
+const userInput = document.getElementById('userInput');
+
+// Dummy code examples (replace this with data fetched from your API)
+let codeExamples = [];
+
+async function fetchCodeExamples() {
+    try {
+        const response = await fetch('/api/v1/game/words/BUSINESS_VOCABULARY'); // Replace this URL with your API endpoint
+        if (response.ok) {
+            const data = await response.json();
+            // Assuming the API response contains a property 'word' for each code example
+            codeExamples = data.map(item => item.word);
+            displayCodeSnippet();
+        } else {
+            console.error('Error fetching code examples:', response.statusText);
+        }
+    } catch (error) {
+        console.error('Error fetching code examples:', error);
+    }
+}
+function displayCodeSnippet() {
+    // Get a random code example from the fetched data
+    const randomIndex = Math.floor(Math.random() * codeExamples.length);
+    const codeSnippet = codeExamples[randomIndex];
+
+    // Display the code snippet in your UI element (assuming you have an element with id 'codeSnippet')
+    const codeSnippetElement = document.getElementById('codeSnippet');
+    codeSnippetElement.textContent = codeSnippet;
 }
 
-function checkWord() {
-  const userInput = document.getElementById('userInput').value.trim();
-  fetch('/api/v1/game/words/check', {
-      method: 'POST',
-      headers: {
-          'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ userInput: userInput })
-  })
-  .then(response => {
-      if (response.ok) {
-          return response.json();
-      }
-      throw new Error('Network response was not ok.');
-  })
-  .then(data => {
-      if (data.correct) {
-          // Logic for correct word
-          updateScore(); // Implement this function to update the score
-          selectTopic(currentTopic); // Fetch a new word
-      } else {
-          // Logic for incorrect word
-          console.log('Incorrect word. Try again.');
-      }
-  })
-  .catch(error => console.error('Error:', error));
+function checkCode() {
+    const userCode = userInput.value.trim();
+    const expectedCode = codeSnippetElement.textContent.trim();
+
+    // Remove leading/trailing whitespace and newlines for accurate comparison
+    const cleanedUserCode = userCode.replace(/^\s+|\s+$/g, '');
+    const cleanedExpectedCode = expectedCode.replace(/^\s+|\s+$/g, '');
+
+    if (cleanedUserCode === cleanedExpectedCode) {
+        // User's code is correct
+        alert('Your code is correct!');
+        // Display a new code snippet
+        displayCodeSnippet();
+    } else {
+        // User's code is incorrect
+        alert('Your code is incorrect. Please try again.');
+    }
+
+    // Clear user input for the next attempt (optional)
+    userInput.value = '';
 }
+
+// Initial setup
+displayCodeSnippet();

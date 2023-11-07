@@ -12,5 +12,5 @@ public interface AlgorithmRepository extends JpaRepository<Algorithm, Long> {
 
   @Query(value = "SELECT * FROM Algorithm ORDER BY RAND() LIMIT 1",
       nativeQuery = true)
-  List<Algorithm> findRandomWord();
+  List<Algorithm> findRandomAlgorithm();
 }

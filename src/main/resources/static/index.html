@@ -3,26 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Game</title>
+    <title>Coding Practice</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Typing Game</h1>
-        <div class="topic-buttons">
-            <button onclick="selectTopic('BUSINESS_VOCABULARY')">Business Vocabulary</button>
-            <button onclick="selectTopic('CODE_KEYWORD')">Code Keywords</button>
-            <button onclick="selectTopic('SCIENCE_VOCABULARY')">Science Vocabulary</button>
+        <div class="code-container">
+            <pre id="codeSnippet"></pre>
         </div>
-        <div class="word-container">
-            <h2>Word:</h2>
-            <span id="word"></span>
-        </div>
-        <input type="text" id="userInput" placeholder="Type the word here...">
-        <button onclick="checkWord()">Submit</button>
-        <div class="score-container">
-            <h2>Score:</h2>
-            <span id="score">0</span>
+        <div class="input-container">
+            <label for="userInput">Your Code:</label>
+            <textarea id="userInput" placeholder="Write your code here..."></textarea>
+            <button onclick="checkCode()">Submit</button>
         </div>
     </div>
     <script src="script.js"></script>
