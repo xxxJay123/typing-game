@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Practice</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing Game</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="container">
-        <div class="code-container">
-            <pre id="codeSnippet"></pre>
-        </div>
-        <div class="input-container">
-            <label for="userInput">Your Code:</label>
-            <textarea id="userInput" placeholder="Write your code here..."></textarea>
-            <button onclick="checkCode()">Submit</button>
-        </div>
-    </div>
-    <script src="script.js"></script>
+  <div class="timer" id="timer"></div>
+  <div class="container">
+    <div class="code-container" id="codeDisplay"></div>
+    <textarea id="codeInput" class="code-input" autofocus></textarea>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>

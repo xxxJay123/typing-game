@@ -1,6 +1,7 @@
 package com.xxxjay123.app.typinggame.entity;
 
 import com.xxxjay123.app.typinggame.util.Language;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -28,7 +29,7 @@ public class Algorithm {
   @Enumerated(EnumType.STRING)
   private Language language;
 
- 
+ @Column(columnDefinition = "LONGTEXT")
   private String algorithm;
 
 }
