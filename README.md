@@ -1,5 +1,4 @@
 # Typing-game(Coding Practice)
-![Alt text](/src/main/resources/banner.txt)
 
 ****
 Welcome to the Typing Game App, a fun and interactive way to improve your typing skills! This app provides you with challenging coding snippets to type out quickly and accurately. Test your coding speed, accuracy, and endurance with our carefully curated collection of programming challenges.
