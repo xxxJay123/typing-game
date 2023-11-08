@@ -1,10 +1,10 @@
 # Typing-game(Coding Practice)
-![Alt text](/typing-game/src/main/resources/banner.txt)
-
+![Alt text](/src/main/resources/banner.txt)
 
 ****
 Welcome to the Typing Game App, a fun and interactive way to improve your typing skills! This app provides you with challenging coding snippets to type out quickly and accurately. Test your coding speed, accuracy, and endurance with our carefully curated collection of programming challenges.
 
+[中文版本.md](/README-zh.md)
 ****
 ## Features
 - Random Coding Challenges: Get random coding challenges to test your skills.
@@ -19,8 +19,8 @@ Welcome to the Typing Game App, a fun and interactive way to improve your typing
 - Type Quickly: Type the code into the input field as accurately and quickly as possible.
 - Get Feedback: Characters you type correctly will be highlighted in white, while mistakes will be shown in red.
 - Beat the Clock: Complete the challenge before the timer runs out to earn the highest score.
-![Alt text](/typing-game/image/image.png)
-![Alt text](/typing-game/image/image-1.png)
+![Alt text](/image/image.png)
+![Alt text](/image/image-1.png)
 ****
 ## Technologies Used
 - Frontend: HTML, CSS, JavaScript
@@ -28,7 +28,7 @@ Welcome to the Typing Game App, a fun and interactive way to improve your typing
 - External APIs: Fetch random coding challenges from external sources.
 ****
 ### Backend API
-[Postman Test](/typing-game/postmanJson/Postman.md)
+[Postman Test](/postmanJson/Postman.md)
 
 
 ****

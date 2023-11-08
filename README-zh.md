@@ -1,11 +1,11 @@
 # Typing-game(Coding Practice)
 
-![Alt text](/typing-game/src/main/resources/banner.txt)
+![Alt text](/src/main/resources/banner.txt)
 
 ****
 歡迎使用打字遊戲應用程序，這是一種提高您打字技能的有趣且互動的方式！ 該應用程式為您提供具有挑戰性的編碼片段，以便您快速且準確地輸入。 透過我們精心策劃的程式設計挑戰集來測試您的編碼速度、準確性和耐力。
 
-[English-Verion.md](/typing-game/README.md)
+[English-Verion.md](/README.md)
 ****
 ## 特點
 - **隨機編碼挑戰**：接受隨機編碼挑戰來測試您的技能。
@@ -20,8 +20,8 @@
 - 快速輸入：盡可能準確、快速地將代碼輸入到輸入欄位中。
 - 取得回饋：您輸入正確的字元將以白色突出顯示，而錯誤的字元將以紅色顯示。
 - 爭分奪秒：在計時器耗盡之前完成挑戰以獲得最高分。
-![Alt text](/typing-game/image/image.png)
-![Alt text](/typing-game/image/image-1.png)
+![Alt text](/image/image.png)
+![Alt text](/image/image-1.png)
 ****
 ## Technologies Used
 - Frontend: HTML, CSS, JavaScript
@@ -29,7 +29,7 @@
 - External APIs: Fetch random coding challenges from external sources.
 ****
 ### Backend API
-[Postman Test](/typing-game/postmanJson/Postman.md)
+[Postman Test](/README-zh.md)
 
 
 ****
